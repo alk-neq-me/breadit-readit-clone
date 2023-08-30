@@ -18,11 +18,12 @@ function UserAuthForm(props: UserAuthFormProps) {
 
   const loginWithGoogle = async () => {
     setIsLoading(true);
-    // await signIn("google")
-    await Promise.reject(new Error("Test Error"))
+    // await Promise.reject(new Error("Test Error"))
+    await signIn("google")
       .catch((err) => toast({
         title: "Failed Sign In",
-        description: err?.message ?? "undefined error"
+        description: err?.message ?? "undefined error",
+        variant: 'destructive'
       }))
       .finally(() => setIsLoading(false));
   }

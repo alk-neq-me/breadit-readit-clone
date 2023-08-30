@@ -1,12 +1,16 @@
 import '@/styles/globals.css';
+import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import Navbar from '@/components/Navbar';
 import { Toaster } from '@/components/ui/toaster';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Breadit',
   description: 'A Reddit clone built with Next.js and TypeScript.',
+  icons: {
+    icon: "/favicon.ico"
+  }
 }
 
 const inter = Inter({ subsets: ["latin"] });

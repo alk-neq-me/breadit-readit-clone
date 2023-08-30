@@ -3,9 +3,7 @@
 
 generator client {
   provider = "prisma-client-js"
-}
-
-datasource db {
+} datasource db {
   provider     = "mysql"
   url          = env("DATABASE_URL")
   relationMode = "prisma"
@@ -43,6 +41,8 @@ model User {
   name          String?
   email         String?   @unique
   emailVerified DateTime?
+
+  username  String? @unique
 
   image    String?
   accounts Account[]
