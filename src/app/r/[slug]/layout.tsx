@@ -82,7 +82,7 @@ async function layout(props: LayoutProps) {
               ) : null}
 
               {subreaddit.creatorId !== session?.user?.id ? (
-                <SubscribeLeaveToggle />
+                <SubscribeLeaveToggle isSubscribed={isSubscribed} subreadditId={subreaddit.id} subredditName={subreaddit.name} />
               ) : null}
             </dl>
           </div>
