@@ -26,15 +26,14 @@ const formatDistanceLocale = {
   almostXYears: '{{count}}y',
 }
 
-export function error_handle(expect: string) {
-  return (err: Error | undefined) => {
-    let msg = "undefined error";
-    if (err instanceof Error) msg = err.message;
-    console.error(`${expect}:`, msg);
-    throw new Error("found error")
-    // toast
-  }
-}
+// export function error_handle(expect: string) {
+//   return (err: Error | undefined) => {
+//     let msg = "undefined error";
+//     if (err instanceof Error) msg = err.message;
+//     console.error(`${expect}:`, msg);
+//     throw new Error("found error")
+//   }
+// }
 
 function formatDistance(token: string, count: number, options?: any): string {
   options = options || {}
